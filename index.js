@@ -1,3 +1,11 @@
+//  Creat book object and add to array.
+//  Display the array dynamically.
+// store the array to the local storage.
+//  Get data from the storage
+// Delete a specific book from the brouser and local storage.
+
+
+
 const bookArr = [];
 const title = document.getElementById('book-title');
 const author = document.getElementById('author');
