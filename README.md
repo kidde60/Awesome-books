@@ -1,60 +1,37 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Awesome project
 
-# Project Name
+> In this project, we made a simple website called Awesome Books. The user is able to add and remove books, the added books are arranged in a list at the top of the page, removing books is also possible with one click. We used javascript to make these funcyions possible, We used simple html to set up the page.
 
-> Description the project.
-
+![](https://img.shields.io/badge/Microverse-blueviolet).
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML & CSS
+- Github
+- Javascript
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+http://127.0.0.1:5500/
 
 ## Authors
 
-👤 **Author1**
+👤 **Tracy Musongole**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/elfin-git)
+- Twitter: [@twitterhandle](https://twitter.com/tracy_muso)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/tracy-musongole)
 
-👤 **Author2**
+👤 **William Kidde**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@kidde60](https://github.com/kidde60)
+- LinkedIn: [@William Kidde](https://linkedin.com/in/george-william-kidde-b5b772231/)
+
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+
 
 Feel free to check the [issues page](../../issues/).
 
