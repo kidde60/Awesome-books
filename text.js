@@ -1,69 +1,67 @@
-//  Creat book object and add to array.
-//  Display the array dynamically.
-// store the array to the local storage.
-//  Get data from the storage
-// Delete a specific book from the brouser and local storage.
-const bookArr = [];
-const title = document.getElementById('book-title');
-const author = document.getElementById('author');
-const bookContainer = document.querySelector('.added-books');
+/* eslint-disable no-alert */
+class Books {
+    constructor(title, author) {
+        // Initializing useful variables
+        this.title = title;
+        this.author = author;
 
-const form = document.querySelector('.form');
-// Add book method
-function addBook(a, b) {
-    const object = {
-        title: a,
-        author: b
+        this.table = document.createElement('table');
+        this.tbody = document.createElement('tbody');
+        this.myForm = document.getElementById('form');
+        this.bookList = document.getElementById('book-list');
+        this.table.appendChild(this.tbody);
+        this.bookList.appendChild(this.table);
+        this.listTitle = document.querySelector('.list-title');
+
+        this.bookData = (localStorage.book != null) ? JSON.parse(localStorage.book) : [];
     }
-    bookArr.push(object);
-    display();
-    storeDataToStorage();
-}
-// function to stora data to local storage
-function storeDataToStorage() {
-    localStorage.setItem('books', JSON.stringify(bookArr));
-}
-// method to display
-function display() {
-    const newDiv = document.createElement('div');
-    newDiv.classList.add('my-list');
-    bookContainer.appendChild(newDiv);
-    bookArr.forEach((book, index) => {
-        newDiv.innerHTML = `<div>
-          <p><strong>${book.title}</strong></p>
-          <p><strong>${book.author}</strong></p>
-          <button class="remove" id="${index}">Remove</button>
-          <hr>
-          </div>
-          `;
-        form.reset();
-    });
-}
-// Add book to the container
-const addBtn = document.querySelector('.btn');
-addBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (title.value !== "" && author.value !== "") {
-        addBook(title.value, author.value);
-    } else {
-        alert('fill all the fields')
+
+    addBook() {
+        if (this.title.value === '' || this.author.value === '') {
+            this.listTitle.innerHTML = 'Please fill the field below';
+        } else {
+            this.bookData.push({ bookTitle: this.title.value, bookAuthor: this.author.value });
+            this.updateStore();
+        }
     }
-})
-// Get data from local storage 
-function getData() {
-    return JSON.parse(localStorage.getItem('books'));
+
+    removeBook(id) {
+        this.bookData.splice(id, 1);
+        this.updateStore();
+        if (this.bookData.length === 0) {
+            this.listTitle.innerHTML = 'Books List is empty';
+        } else {
+            this.listTitle.innerHTML = '';
+        }
+    }
+
+    displayBooks() {
+        this.tbody.innerHTML = '';
+        let id = 0;
+
+        this.bookData.forEach((book) => {
+            this.tbody.innerHTML
+                += ` 
+          <tr>
+          <td>
+            <strong>"${book.bookTitle}"</strong>
+            <span><strong>by ${book.bookAuthor}</strong></span>
+          </td>
+          <td class="remove" onClick="book.removeBook(${id})">Remove</td>
+          </tr> 
+           `;
+            id += 1;
+        });
+    }
+
+    updateStore() {
+        localStorage.book = JSON.stringify(this.bookData);
+        this.displayBooks();
+    }
 }
-window.addEventListener('load', () => {
-    getData().forEach((book, index) => {
-        const newDiv = document.createElement('div');
-        newDiv.classList.add('my-list');
-        bookContainer.appendChild(newDiv);
-        newDiv.innerHTML = `<div>
-        <p><strong>${book.title}</strong></p>
-        <p><strong>${book.author}</strong></p>
-        <button class="remove" id="${index}">Remove</button>
-        <hr>
-        </div>
-        `;
-    })
-});
+
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+
+const book = new Books(title, author);
+book.displayBooks();

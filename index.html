@@ -10,19 +10,27 @@
 </head>
 
 <body>
-    <section id="awesome-books">
-        <h1>Awesome books</h1>
-        <div class="added-books">
-        </div>
-        <form class="form">
-            <label for="book-title"></label>
-            <input type="text" id="book-title" placeholder="Title"><br><br>
-            <label for="author"></label>
-            <input type="text" id="author" placeholder="Author"><br><br>
-            <button type="submit" class="btn" id="btn">Add</button>
+    <h1 onclick="this.innerHTML='William!'">Awesome Books</h1>
+    <h2 class="list-title"></h2>
 
-        </form>
-    </section>
+    <div class="book-list" id="book-list">
+    </div>
+    <h2 id="list-title" class="list-title"></h2>
+
+
+    <hr>
+
+
+    <form action="#" id="form" class="form-data">
+        <h3>Add a new book</h3>
+        <label for="title"></label>
+        <input type="text" id="title" placeholder="Title" class="text-input" /> <br><br>
+        <label for="author"></label>
+        <input type="text" id="author" placeholder="Author" class="text-input" /><br><br>
+        <div class="btn-container">
+            <button type="submit" class="btn" id="btn-1" onclick="book.addBook()">Add</button>
+        </div>
+    </form>
     <script src="text.js"></script>
 </body>
 
