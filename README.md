@@ -1,6 +1,6 @@
-# Awesome project
+# Awesome books: a complete website with navigation
 
-> In this project, we made a simple website called Awesome Books. The user is able to add and remove books, the added books are arranged in a list at the top of the page, removing books is also possible with one click. We used javascript to make these funcyions possible, We used simple html to set up the page.
+> In this project, you will take the Awesome books application and convert it into a fully functional website. You will refactor the project to add three new sections on top of the two sections you have already completed: Books list (done), Add book form (done), a new Contact info section, a Navigation bar, and a Footer.
 
 ![](https://img.shields.io/badge/Microverse-blueviolet).
 
@@ -10,10 +10,8 @@
 - Github
 - Javascript
 
-## Live Demo 
-
-http://127.0.0.1:5500/
-
+## Live Demo
+ -  https://kidde60.github.io/Awesome-books/
 ## Authors
 
 👤 **Tracy Musongole**
@@ -27,11 +25,9 @@ http://127.0.0.1:5500/
 - GitHub: [@kidde60](https://github.com/kidde60)
 - LinkedIn: [@William Kidde](https://linkedin.com/in/george-william-kidde-b5b772231/)
 
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
 
 Feel free to check the [issues page](../../issues/).
 
