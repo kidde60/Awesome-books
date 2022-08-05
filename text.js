@@ -1,4 +1,5 @@
 /* eslint-disable no-alert */
+// Alternative method for for using JavaScript classes 
 class Books {
     constructor(title, author) {
         // Initializing useful variables
